@@ -1,0 +1,18 @@
+name: t21_seis
+
+channels:
+  - pyviz
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.8
+  - numpy
+  - matplotlib
+  - xarray
+  - segyio
+  - scipy
+  - holoviz
+  - jupyter
+  - pip
+  - pip:
+    - seismic-zfp
