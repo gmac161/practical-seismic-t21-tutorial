@@ -116,6 +116,10 @@
   {
    "cell_type": "code",
    "execution_count": null,
+<<<<<<< HEAD
+   "id": "solar-cover",
+=======
+>>>>>>> 7329c17010badf6f926bb2fef49dc5931a341a04
    "metadata": {},
    "outputs": [],
    "source": [
@@ -149,6 +153,10 @@
   {
    "cell_type": "code",
    "execution_count": null,
+<<<<<<< HEAD
+   "id": "distant-simpson",
+=======
+>>>>>>> 7329c17010badf6f926bb2fef49dc5931a341a04
    "metadata": {},
    "outputs": [],
    "source": [
@@ -165,6 +173,10 @@
   {
    "cell_type": "code",
    "execution_count": null,
+<<<<<<< HEAD
+   "id": "packed-transition",
+=======
+>>>>>>> 7329c17010badf6f926bb2fef49dc5931a341a04
    "metadata": {},
    "outputs": [],
    "source": [
@@ -189,6 +201,10 @@
   {
    "cell_type": "code",
    "execution_count": null,
+<<<<<<< HEAD
+   "id": "stupid-drain",
+=======
+>>>>>>> 7329c17010badf6f926bb2fef49dc5931a341a04
    "metadata": {},
    "outputs": [],
    "source": [
@@ -270,9 +286,14 @@
   {
    "cell_type": "code",
    "execution_count": null,
+<<<<<<< HEAD
+   "id": "loving-encounter",
+   "metadata": {},
+=======
    "metadata": {
     "scrolled": true
    },
+>>>>>>> 7329c17010badf6f926bb2fef49dc5931a341a04
    "outputs": [],
    "source": [
     "import itertools\n",
@@ -287,6 +308,10 @@
   {
    "cell_type": "code",
    "execution_count": null,
+<<<<<<< HEAD
+   "id": "invalid-mixer",
+=======
+>>>>>>> 7329c17010badf6f926bb2fef49dc5931a341a04
    "metadata": {},
    "outputs": [],
    "source": [
@@ -389,8 +414,13 @@
    "outputs": [],
    "source": [
     "# Plot\n",
+<<<<<<< HEAD
+    "imgplot = plt.imshow(d[nil // 2,:,:], cmap='gray', aspect='auto', vmin=-5, vmax=5)\n",
+    "plt.show()"
+=======
     "central = len(ilines) // 2\n",
     "imgplot = plt.imshow(d[central,:,:], cmap='gray', aspect='auto', vmin=-5, vmax=5)"
+>>>>>>> 7329c17010badf6f926bb2fef49dc5931a341a04
    ]
   },
   {
@@ -408,9 +438,22 @@
    "metadata": {},
    "outputs": [],
    "source": [
+<<<<<<< HEAD
+    "# Include the extent from the relevant arrays containing the time and xline\n",
+    "extent = [xlines[0], xlines[-1], t[-1], t[0]]\n",
+    "# Plot the central inline in the usual orientation by transposing the data\n",
+    "imgplot = plt.imshow(d[nil // 2,:,:].T, cmap='gray', aspect='auto', vmin=-5, vmax=5, extent=extent)\n",
+    "# Add some labels\n",
     "plt.xlabel('Xline')\n",
     "plt.ylabel('TWT (ms)')\n",
     "plt.show()"
+=======
+    "extent  = [xlines[0], xlines[-1], t[-1], t[0]]\n",
+    "imgplot = plt.imshow(d[central,:,:].T, cmap='gray', aspect='auto', vmin=-5, vmax=5, extent=extent)\n",
+    "# GRAEME Sort out adding labels\n",
+    "ax.set_xlabel('Xline')\n",
+    "ax.set_ylabel('TWT (ms)')"
+>>>>>>> 7329c17010badf6f926bb2fef49dc5931a341a04
    ]
   },
   {
@@ -461,6 +504,25 @@
   {
    "cell_type": "code",
    "execution_count": null,
+<<<<<<< HEAD
+   "id": "automotive-wichita",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Set the default image size\n",
+    "from holoviews import opts\n",
+    "\n",
+    "opts.defaults(\n",
+    "    opts.Image(\n",
+    "        width=800, height=600))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "selective-birmingham",
+=======
+>>>>>>> 7329c17010badf6f926bb2fef49dc5931a341a04
    "metadata": {},
    "outputs": [],
    "source": [
@@ -727,8 +789,23 @@
    "metadata": {},
    "outputs": [],
    "source": [
+<<<<<<< HEAD
+    "fig, axs = plt.subplots(1,2, figsize=(16,6))\n",
+    "extent = [xlines[0], xlines[-1], ilines[0], ilines[-1]]\n",
+    "axs[0].imshow(d[:,:,75], cmap='gray', origin='lower', aspect='auto', vmin=-5, vmax=5, extent=extent)\n",
+=======
+    "base    =      d[:, :, 75]\n",
+    "monitor = data_m[:, :, 75]\n",
+    "\n",
+    "fig, axs = plt.subplots(1,2, figsize = (11,8))\n",
+    "\n",
+    "extent = [xlines[0], xlines[-1], ilines[-1], ilines[0]]\n",
+    "axs[0].imshow(base, cmap='gray', origin='lower', aspect='auto', vmin=-5, vmax=5, extent=extent)\n",
+>>>>>>> 7329c17010badf6f926bb2fef49dc5931a341a04
     "axs[0].set_title('2002 Base, Time Slice')\n",
+    "axs[1].imshow(monitor, cmap='gray', origin='lower', aspect='auto', vmin=-5, vmax=5, extent=extent)\n",
     "axs[1].set_title('2010 Monitor, Time Slice')\n",
+    "plt.tight_layout()\n",
     "plt.show()"
    ]
   },
