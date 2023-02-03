@@ -2,6 +2,7 @@ name: t21_seis
 
 channels:
   - conda-forge
+  - pyviz
   - defaults
 dependencies:
   - python=3.10
@@ -10,7 +11,7 @@ dependencies:
   - xarray
   - segyio
   - scipy
-  - pyviz
+  - panel
   - hvplot
   - dask
   - jupyter
